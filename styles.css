@@ -13,3 +13,11 @@ body {
   color: #eee;
   background-color: #222;
 }
+
+/* HEADER */
+
+header {
+  position: relative;
+  height: 35vh;
+  border-bottom: 7px solid #eee;
+}
