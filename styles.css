@@ -14,7 +14,6 @@ body {
   background-color: #222;
 }
 
-/* HEADER */
 
 header {
   position: relative;
@@ -58,7 +57,7 @@ h1 {
   left: 2rem;
 }
 
-/* MAIN */
+
 main {
   height: 65vh;
   color: #eee;
