@@ -30,6 +30,12 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
+@media screen and (max-width: 696px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
 .number {
   background-color: #eee;
   color: #333;
@@ -84,6 +90,14 @@ main {
   margin-bottom: 3rem;
 }
 
+@media screen and (max-width: 696px) {
+  .guess {
+    width: 15rem;
+    font-size: 3rem;
+    padding: 1.5rem;
+  }
+}
+
 .btn {
   border: none;
   background-color: #eee;
@@ -120,4 +134,17 @@ main {
 
 .footer a {
   color: green;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 567px) {
+  .btn {
+    padding: 1rem 1.5rem;
+  }
+
+  main {
+    flex-direction: column;
+    height: 40vh;
+  }
 }
