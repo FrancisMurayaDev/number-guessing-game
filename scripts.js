@@ -9,6 +9,28 @@ console.info(txtnumber);
 let txtguess=document.querySelector('.guess');
 let txtscore=document.querySelector('.score');
 
+txtguess.addEventListener('input', function(event) {
+    const inputValue = this.value;
+    const parsedValue = parseInt(inputValue);
+    const isDeletion = event.inputType === 'deleteContentBackward' || event.inputType === 'deleteContentForward';
+
+    if (isDeletion) {
+      // Allow deletion
+      this.dataset.previousValue = inputValue; // Update previous value on deletion
+      return;
+    }
+
+    if (isNaN(parsedValue) || parsedValue < 1 || parsedValue > 20) {
+      // Prevent invalid input
+      this.value = this.dataset.previousValue || '';
+    } else {
+      // Store the current valid value
+      this.dataset.previousValue = inputValue;
+    }
+  });
+  
+  
+
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(txtguess.value);
 
